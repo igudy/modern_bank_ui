@@ -1,7 +1,7 @@
 import styles, { layout } from '../style';
 import Button from './Button'
 import { features } from '../constants';
-import {    } from 'react-reveal';
+import { Slide } from 'react-reveal';
 
 // Destructing
 const FeatureCard = ({ icon, title, content, index }) => (
