@@ -1,7 +1,9 @@
-import React from 'react';
 import { discount, robot } from '../assets';
 import styles from '../style';
 import GetStarted from './GetStarted';
+import React, { Component } from 'react'
+// import Typical from 'react-typical'
+import Typewriter from 'typewriter-effect';
 
 
 const Hero = () =>
@@ -11,12 +13,44 @@ const Hero = () =>
                 <div className='flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2'>
                     <img src={ discount } alt="discount" className='w-[32px] h-[32px]'/>
                     <p className={`${styles.paragraph} ml-2`}>
-                        <span className='text-white'>20%</span>
-                        Discount For {" "}
-                        <span className='text-white'>1 Month</span>
-                        Account
+                        <span className='text-white'>
+                            {/* 20% Discount For 1 Month Account */}
+                            <Typewriter onInit={(typewriter) => {
+                                typewriter.pauseFor(10)
+                                .typeString('20% Discount For 1 Month Account')
+                                .pauseFor(100)
+                                .deleteChars(32)
+                                .typeString('<strong>30%</strong> Discount For 6 Months Account')
+                                .pauseFor(100)
+                                .deleteChars(35)
+                                .typeString('<strong> <span style="color: lightblue;"> 50% Discount</span> For 1 Year Account</strong>')
+                                .pauseFor(2000)
+                                .start()                   
+                     }}
+                    />
+                        </span>
+
+                        {/* <Typical 
+                        loop={Infinity}
+                        wrapper="b"
+                        steps={[
+                        '20% Discount For 1 Month Account',
+                        1000,
+                        '50% Discount for 1 Year Account',
+                        10000
+                        ]}
+                        />
+                        </span> */}
+                        {/* Discount For {" "}
+                        <span className='text-white'>
+                        </span> */}
                     </p>
                 </div>
+
+                <div className='text-5xl text-white text-bold'>
+
+                </div>
+
 
                 {/* The Next Generation Payment Part */}
                 <div className='flex flex-row justify-between items-center w-full'>
