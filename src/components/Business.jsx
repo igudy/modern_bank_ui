@@ -1,7 +1,7 @@
 import styles, { layout } from '../style';
 import Button from './Button'
 import { features } from '../constants';
-
+import {    } from 'react-reveal';
 
 // Destructing
 const FeatureCard = ({ icon, title, content, index }) => (
@@ -22,7 +22,8 @@ const FeatureCard = ({ icon, title, content, index }) => (
 
 const Business = () =>
     (
-        <section id="features" className={layout.section}>
+    <section id="features" className={layout.section}>
+        <Slide left>
             <div className={layout.sectionInfo}>
                 <h2 className={styles.heading2}>You do the business, <br className='sm:block hidden'/>We'll handle the money.</h2>
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
@@ -32,12 +33,16 @@ const Business = () =>
 
             <Button styles="mt-10" />
             </div>
+        </Slide>
 
-            <div className={`${layout.sectionImg} flex-col`}>
+
+        <Slide right>
+        <div className={`${layout.sectionImg} flex-col`}>
                 {features.map((feature, index) => (
                     <FeatureCard key={feature.id} {...feature} index={index} />
                 ))}
             </div>
+        </Slide>
         </section>
     )
 

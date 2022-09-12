@@ -4,6 +4,8 @@ import GetStarted from './GetStarted';
 import React, { Component } from 'react'
 // import Typical from 'react-typical'
 import Typewriter from 'typewriter-effect';
+import {Zoom, Slide, LightSpeed, Pulse} from 'react-reveal';
+
 
 
 const Hero = () =>
@@ -26,24 +28,9 @@ const Hero = () =>
                                 .typeString('<strong> <span style="color: lightblue;"> 50% Discount</span> For 1 Year Account</strong>')
                                 .pauseFor(2000)
                                 .start()                   
-                     }}
-                    />
-                        </span>
-
-                        {/* <Typical 
-                        loop={Infinity}
-                        wrapper="b"
-                        steps={[
-                        '20% Discount For 1 Month Account',
-                        1000,
-                        '50% Discount for 1 Year Account',
-                        10000
-                        ]}
+                        }}
                         />
-                        </span> */}
-                        {/* Discount For {" "}
-                        <span className='text-white'>
-                        </span> */}
+                        </span>
                     </p>
                 </div>
 
@@ -74,7 +61,7 @@ const Hero = () =>
             </div>
             
                 <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-                    <img src={robot} alt="billing" className="w-[100%] relatinve z-[5]" />
+                    <img src={robot} alt="billing" className="w-[100%] relatinve z-[5]" />    
                     <div className='absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient' />
                     <div className='absolute z-[1] w-[80%] h-[80%] rounded-full bottom-40 white__gradient' />
                     <div className='absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient' />
